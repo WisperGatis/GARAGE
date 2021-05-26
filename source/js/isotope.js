@@ -743,11 +743,11 @@ function getStyleProperty( propName ) {
     }
   }
 }
-
 // transport
 if ( typeof define === 'function' && define.amd ) {
   // AMD
   define( 'get-style-property/get-style-property',[],function() {
+
     return getStyleProperty;
   });
 } else if ( typeof exports === 'object' ) {
