@@ -850,8 +850,9 @@ function setup() {
     var getStyleFn = getComputedStyle ?
       function( elem ) {
         return getComputedStyle( elem, null );
-      } :
+      }:
       function( elem ) {
+        
         return elem.currentStyle;
       };
 
@@ -866,7 +867,7 @@ function setup() {
       };
   })();
 
-  // -------------------------- box sizing -------------------------- //
+  // -------------------------- box sizing -------------------------- //ol
 
   boxSizingProp = getStyleProperty('boxSizing');
 
@@ -878,6 +879,7 @@ function setup() {
     var div = document.createElement('div');
     div.style.width = '200px';
     div.style.padding = '1px 2px 3px 4px';
+    l
     div.style.borderStyle = 'solid';
     div.style.borderWidth = '1px 2px 3px 4px';
     div.style[ boxSizingProp ] = 'border-box';
@@ -4202,6 +4204,7 @@ var getText = docElem.textContent ?
       var item = removeItems[i];
       // remove item from collection
       utils.removeFrom( this.filteredItems, item );
+  
     }
   };
 
