@@ -1466,7 +1466,6 @@ utils.htmlInit = function( WidgetClass, namespace ) {
     }
   });
 };
-
 // -----  ----- //
 
 return utils;
