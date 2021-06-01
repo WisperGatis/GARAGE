@@ -93,7 +93,6 @@
 
     }
 
-
     if (typeof define === 'function' && define.amd) {
 
         define('jquery-bridget/jquery.bridget', ['jquery'], defineBridget);
@@ -106,13 +105,9 @@
 
 })(window);
 
-
 (function (window) {
 
-
-
     var docElem = document.documentElement;
-
     var bind = function () { };
 
     function getIEEvent(obj) {
@@ -164,7 +159,6 @@
         unbind: unbind
     };
 
-
     if (typeof define === 'function' && define.amd) {
 
         define('eventie/eventie', eventie);
@@ -177,7 +171,6 @@
     }
 
 })(window);
-
 
 ; (function () {
     'use strict';
@@ -384,31 +377,24 @@
                     if (listener.once === true) {
                         this.removeListener(evt, listener.listener);
                     }
-
                     response = listener.listener.apply(this, args || []);
-
                     if (response === this._getOnceReturnValue()) {
                         this.removeListener(evt, listener.listener);
                     }
                 }
             }
         }
-
         return this;
     };
-
     proto.trigger = alias('emitEvent');
-
     proto.emit = function emit(evt) {
         var args = Array.prototype.slice.call(arguments, 1);
         return this.emitEvent(evt, args);
     };
-
     proto.setOnceReturnValue = function setOnceReturnValue(value) {
         this._onceReturnValue = value;
         return this;
     };
-
     proto._getOnceReturnValue = function _getOnceReturnValue() {
         if (this.hasOwnProperty('_onceReturnValue')) {
             return this._onceReturnValue;
@@ -421,7 +407,6 @@
     proto._getEvents = function _getEvents() {
         return this._events || (this._events = {});
     };
-
     EventEmitter.noConflict = function noConflict() {
         exports.EventEmitter = originalGlobalValue;
         return EventEmitter;
@@ -444,7 +429,6 @@
 
     var prefixes = 'Webkit Moz ms Ms O'.split(' ');
     var docElemStyle = document.documentElement.style;
-
     function getStyleProperty(propName) {
         if (!propName) {
             return;
@@ -464,7 +448,6 @@
             }
         }
     }
-
     if (typeof define === 'function' && define.amd) {
         define('get-style-property/get-style-property', [], function () {
             return getStyleProperty;
@@ -480,21 +463,17 @@
 
 (function (window, undefined) {
 
-
-
     function getStyleSize(value) {
         var num = parseFloat(value);
         var isValid = value.indexOf('%') === -1 && !isNaN(num);
         return isValid && num;
     }
-
     function noop() { }
 
     var logError = typeof console === 'undefined' ? noop :
         function (message) {
             console.error(message);
         };
-
 
     var measurements = [
         'paddingLeft',
@@ -527,9 +506,7 @@
         return size;
     }
 
-
     function defineGetSize(getStyleProperty) {
-
 
         var isSetup = false;
 
@@ -540,7 +517,6 @@
                 return;
             }
             isSetup = true;
-
             var getComputedStyle = window.getComputedStyle;
             getStyle = (function () {
                 var getStyleFn = getComputedStyle ?
@@ -551,7 +527,6 @@
 
                         return elem.currentStyle;
                     };
-
                 return function getStyle(elem) {
                     var style = getStyleFn(elem);
                     if (!style) {
@@ -584,24 +559,19 @@
 
         }
 
-
         function getSize(elem) {
             setup();
 
             if (typeof elem === 'string') {
                 elem = document.querySelector(elem);
             }
-
             if (!elem || typeof elem !== 'object' || !elem.nodeType) {
                 return;
             }
-
             var style = getStyle(elem);
-
             if (style.display === 'none') {
                 return getZeroSize();
             }
-
             var size = {};
             size.width = elem.offsetWidth;
             size.height = elem.offsetHeight;
@@ -2038,7 +2008,6 @@
         this.reveal(items);
     };
 
-
     Outlayer.prototype.hideItemElements = function (elems) {
         var items = this.getItems(elems);
         this.hide(items);
@@ -2072,7 +2041,6 @@
 
         this._emitCompleteOnItems('remove', removeItems);
 
-
         if (!removeItems || !removeItems.length) {
             return;
         }
@@ -2084,7 +2052,6 @@
             utils.removeFrom(this.items, item);
         }
     };
-
 
     Outlayer.prototype.destroy = function () {
 
@@ -2115,7 +2082,6 @@
         return id && instances[id];
     };
 
-
     Outlayer.create = function (namespace, options) {
         function Layout() {
             Outlayer.apply(this, arguments);
@@ -2141,9 +2107,7 @@
 
         Layout.Item.prototype = new Item();
 
-
         utils.htmlInit(Layout, namespace);
-
 
         if (jQuery && jQuery.bridget) {
             jQuery.bridget(namespace, Layout);
@@ -2152,14 +2116,11 @@
         return Layout;
     };
 
-
     Outlayer.Item = Item;
 
     return Outlayer;
 
 }));
-
-
 
 (function (window, factory) {
     'use strict';
@@ -2221,7 +2182,6 @@
 
 }));
 
-
 (function (window, factory) {
     'use strict';
 
@@ -2278,7 +2238,6 @@
             };
         }
     })();
-
 
     LayoutMode.prototype.needsVerticalResizeLayout = function () {
         var size = getSize(this.isotope.element);
@@ -2350,7 +2309,6 @@
     return LayoutMode;
 
 }));
-
 
 (function (window, factory) {
     'use strict';
@@ -2512,7 +2470,6 @@
 
 }));
 
-
 (function (window, factory) {
     'use strict';
     if (typeof define == 'function' && define.amd) {
@@ -2574,7 +2531,6 @@
 
 }));
 
-
 (function (window, factory) {
     'use strict';
     if (typeof define == 'function' && define.amd) {
@@ -2635,7 +2591,6 @@
 
 }));
 
-
 (function (window, factory) {
     'use strict';
     if (typeof define == 'function' && define.amd) {
@@ -2680,7 +2635,6 @@
     return Vertical;
 
 }));
-
 
 (function (window, factory) {
     'use strict';
@@ -2730,9 +2684,6 @@
 
 }(window, function factory(window, Outlayer, getSize, matchesSelector, utils,
     Item, LayoutMode) {
-
-
-
 
     var jQuery = window.jQuery;
 
@@ -2793,8 +2744,6 @@
         return items;
     };
 
-
-
     Isotope.prototype._initLayoutMode = function (name) {
         var Mode = LayoutMode.modes[name];
         var initialOpts = this.options[name] || {};
@@ -2802,7 +2751,6 @@
             utils.extend(Mode.options, initialOpts) : initialOpts;
         this.modes[name] = new Mode(this);
     };
-
 
     Isotope.prototype.layout = function () {
         if (!this._isLayoutInited && this.options.isInitLayout) {
@@ -2875,7 +2823,6 @@
         });
     };
 
-
     Isotope.prototype._filter = function (items) {
         var filter = this.options.filter;
         filter = filter || '*';
@@ -2924,7 +2871,6 @@
         };
     };
 
-
     Isotope.prototype.updateSortData = function (elems) {
         var items;
         if (elems) {
@@ -2945,7 +2891,6 @@
             this._sorters[key] = mungeSorter(sorter);
         }
     };
-
     Isotope.prototype._updateItemsSortData = function (items) {
         var len = items && items.length;
 
@@ -2954,7 +2899,6 @@
             item.updateSortData();
         }
     };
-
     var mungeSorter = (function () {
         function mungeSorter(sorter) {
             if (typeof sorter != 'string') {
@@ -2975,7 +2919,6 @@
 
             return sorter;
         }
-
         function getValueGetter(attr, query) {
             var getValue;
             if (attr) {
@@ -2990,7 +2933,6 @@
             }
             return getValue;
         }
-
         return mungeSorter;
     })();
 
@@ -3172,5 +3114,4 @@
     };
 
     return Isotope;
-
 }));
