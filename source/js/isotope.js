@@ -1,20 +1,18 @@
+/*
+crée par Wesley "wisp" David
+*/
+
 (function (window) {
-
-
-
 
     var slice = Array.prototype.slice;
 
     function noop() { }
-
 
     function defineBridget($) {
 
         if (!$) {
             return;
         }
-
-
         function addOptionMethod(PluginClass) {
 
             if (PluginClass.prototype.option) {
@@ -55,9 +53,7 @@
                             continue;
                         }
 
-
                         var returnValue = instance[options].apply(instance, args);
-
 
                         if (returnValue !== undefined) {
                             return returnValue;
@@ -82,7 +78,6 @@
             };
 
         }
-
 
         $.bridget = function (namespace, PluginClass) {
             addOptionMethod(PluginClass);
@@ -354,7 +349,6 @@
         else {
             delete this._events;
         }
-
         return this;
     };
 
@@ -656,11 +650,8 @@
 
 (function (window) {
 
-
-
     var document = window.document;
     var queue = [];
-
     function docReady(fn) {
         if (typeof fn !== 'function') {
             return;
@@ -740,11 +731,9 @@
         }
     })();
 
-
     function match(elem, selector) {
         return elem[matchesMethod](selector);
     }
-
 
     function checkParent(elem) {
         if (elem.parentNode) {
@@ -766,12 +755,10 @@
         return false;
     }
 
-
     function matchChild(elem, selector) {
         checkParent(elem);
         return match(elem, selector);
     }
-
 
     var matchesSelector;
 
@@ -782,7 +769,6 @@
     } else {
         matchesSelector = query;
     }
-
 
     if (typeof define === 'function' && define.amd) {
 
@@ -799,11 +785,9 @@
 
 })(Element.prototype);
 
-
 (function (window, factory) {
 
     'use strict';
-
 
     if (typeof define == 'function' && define.amd) {
 
@@ -831,8 +815,6 @@
 
 }(window, function factory(window, docReady, matchesSelector) {
 
-
-
     var utils = {};
 
     utils.extend = function (a, b) {
@@ -842,11 +824,9 @@
         return a;
     };
 
-
     utils.modulo = function (num, div) {
         return ((num % div) + div) % div;
     };
-
 
     var objToString = Object.prototype.toString;
     utils.isArray = function (obj) {
@@ -895,7 +875,6 @@
                 obj.nodeType == 1 && typeof obj.nodeName == 'string';
         };
 
-
     utils.setText = (function () {
         var setTextProperty;
         function setText(elem, text) {
@@ -904,7 +883,6 @@
         }
         return setText;
     })();
-
 
     utils.getParent = function (elem, selector) {
         while (elem != document.body) {
@@ -928,7 +906,6 @@
             this[method](event);
         }
     };
-
 
     utils.filterFindElements = function (elems, selector) {
         elems = utils.makeArray(elems);
@@ -955,7 +932,6 @@
         return ffElems;
     };
 
-
     utils.debounceMethod = function (_class, methodName, threshold) {
         var method = _class.prototype[methodName];
         var timeoutName = methodName + 'Timeout';
@@ -974,7 +950,6 @@
             }, threshold || 100);
         };
     };
-
 
     utils.toDashed = function (str) {
         return str.replace(/(.)([A-Z])/g, function (match, $1, $2) {
@@ -1011,11 +986,8 @@
             }
         });
     };
-
     return utils;
-
 }));
-
 
 (function (window, factory) {
     'use strict';
@@ -1052,7 +1024,6 @@
 }(window, function factory(window, EventEmitter, getSize, getStyleProperty, utils) {
     'use strict';
 
-
     var getComputedStyle = window.getComputedStyle;
     var getStyle = getComputedStyle ?
         function (elem) {
@@ -1062,7 +1033,6 @@
             return elem.currentStyle;
         };
 
-
     function isEmptyObj(obj) {
         for (var prop in obj) {
             return false;
@@ -1070,7 +1040,6 @@
         prop = null;
         return true;
     }
-
 
     var transitionProperty = getStyleProperty('transition');
     var transformProperty = getStyleProperty('transform');
@@ -1102,7 +1071,6 @@
         }
         return cache;
     })();
-
 
     function Item(element, layout) {
         if (!element) {
@@ -1330,7 +1298,6 @@
 
     Item.prototype.transition = Item.prototype[transitionProperty ? '_transition' : '_nonTransition'];
 
-
     Item.prototype.onwebkitTransitionEnd = function (event) {
         this.ontransitionend(event);
     };
@@ -1532,7 +1499,6 @@
     var GUID = 0;
     var instances = {};
 
-
     function Outlayer(element, options) {
         var queryElement = utils.getQueryElement(element);
         if (!queryElement) {
@@ -1634,7 +1600,6 @@
         return elems;
     };
 
-
     Outlayer.prototype.layout = function () {
         this._resetLayout();
         this._manageStamps();
@@ -1651,7 +1616,6 @@
     Outlayer.prototype._resetLayout = function () {
         this.getSize();
     };
-
 
     Outlayer.prototype.getSize = function () {
         this.size = getSize(this.element);
@@ -2275,7 +2239,6 @@
         return firstItem && firstItem.element && getSize(firstItem.element);
     };
 
-
     LayoutMode.prototype.layout = function () {
         this.isotope.layout.apply(this.isotope, arguments);
     };
@@ -2284,7 +2247,6 @@
         this.isotope.getSize();
         this.size = this.isotope.size;
     };
-
 
     LayoutMode.modes = {};
 
@@ -2334,8 +2296,6 @@
     }
 
 }(window, function factory(Outlayer, getSize, utils) {
-
-
 
     var Masonry = Outlayer.create('masonry');
 
@@ -2499,7 +2459,6 @@
         }
         return a;
     }
-
 
     var MasonryMode = LayoutMode.create('masonry');
 
@@ -2686,7 +2645,6 @@
     Item, LayoutMode) {
 
     var jQuery = window.jQuery;
-
 
     var trim = String.prototype.trim ?
         function (str) {
