@@ -1494,7 +1494,6 @@ crée par Wesley "wisp" David
     var jQuery = window.jQuery;
     var noop = function () { };
 
-
     var GUID = 0;
     var instances = {};
 
@@ -1995,7 +1994,6 @@ crée par Wesley "wisp" David
                 items.push(item);
             }
         }
-
         return items;
     };
 
@@ -2036,7 +2034,6 @@ crée par Wesley "wisp" David
         if (jQuery) {
             jQuery.removeData(this.element, this.constructor.namespace);
         }
-
     };
 
     Outlayer.data = function (elem) {
@@ -2078,7 +2075,6 @@ crée par Wesley "wisp" David
 
         return Layout;
     };
-
     Outlayer.Item = Item;
 
     return Outlayer;
@@ -2207,7 +2203,6 @@ crée par Wesley "wisp" David
         var hasSizes = this.isotope.size && size;
         return hasSizes && size.innerHeight != this.isotope.size.innerHeight;
     };
-
 
     LayoutMode.prototype._getMeasurement = function () {
         this.isotope._getMeasurement.apply(this, arguments);
