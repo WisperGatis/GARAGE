@@ -1332,7 +1332,6 @@ crée par Wesley "wisp" David
             onTransitionEnd.call(this);
             delete _transition.onEnd[propertyName];
         }
-
         this.emitEvent('transitionEnd', [this]);
     };
 

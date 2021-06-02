@@ -8,7 +8,6 @@
  Template: GARAGE
  */
 
-
 .allcontain{
 	max-width: 1366px;
 	margin-left: auto;
@@ -16,7 +15,6 @@
 }
 .header{
 	background-color: #191919;
-	
 }
 .header .container{
 	padding: 0px;
@@ -27,7 +25,7 @@ list-style-type: none;
 display: inline-block;
 margin: 0px;
 padding-left: 11.2%;
- 
+
 }
 .socialicon>li{
 float: left;
@@ -293,7 +291,7 @@ float: right;
 }
 #navbarontop{
 	 padding-left: 0px;
-	padding-top: 40px; 
+	padding-top: 40px;
 	height: 250px;
 }
 #navbarontop>li>a{
@@ -375,9 +373,9 @@ font-size: 15.88pt;
  
 .carousel-caption>p{
 font-size: 10pt;
-}	
 }
- 
+}
+
 
 /* -----------------------------Second Navbar ---------------------------------------*/
 .downicon{
@@ -391,8 +389,6 @@ font-size: 10pt;
  	width: 100%;
  	margin: 0px;
  	border-radius: 0px;
- 
- 
 }
 #navbarmidle{
 		padding-left: 6.6%;
@@ -757,11 +753,11 @@ font-weight: bold;
 	font-size: 15pt;
 	padding-top: 20px;
 	padding-bottom: 20px;
- 
+
 }
 .bdots{
 	padding-right: 15px;
-} 
+}
 .carstxt{
 	padding-left: 20px;
 	padding-right: 15px;
@@ -777,7 +773,7 @@ font-weight: bold;
 .carstxt{
 	padding-left: 20px;
 	padding-right: 20px;
-} 
+}
 }
 
 /* -----------------------Featured Cars--------------------------------------------------------*/
@@ -785,13 +781,13 @@ font-weight: bold;
 	max-width:46.3%;
 }
 .img1colon>img{
- 
+
 	width: 100%;
-  
+
 }
 .costumrow{
 	border-top: 1px solid #BABABA;
-	border-bottom: 1px solid #BABABA;	
+	border-bottom: 1px solid #BABABA;
 }
 .txt1colon{
 	width: 53.7%;
@@ -801,10 +797,10 @@ font-weight: bold;
 	height: auto;
 	border: 1px solid #C59E47;
 	margin-top: 7%;
- 
+
 	margin-right: auto;
 	margin-left: auto;
- 
+
 }
 .featurecontant>h1{
 	font-family: "OpenSans Regular";
@@ -851,8 +847,7 @@ font-weight: bold;
 	border: 1px solid #020243;
 	background: none;
 	color: #020243;
-} 
- 
+}
 
 .img2colon{
 	padding: 0px!important;
@@ -905,8 +900,8 @@ font-weight: bold;
 	-moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in; 
-} 
+    transition: all .2s ease-in;
+}
 #readmore2{
 	overflow-y: auto;
 	position: absolute;
@@ -932,7 +927,7 @@ font-weight: bold;
 }
 #readmore2>button{
 	background: none;
-	border: 1px solid #020243; 
+	border: 1px solid #020243;
 	font-family: "OpenSans Regular";
 	font-size: 19px;
 	color:#020243;
@@ -949,7 +944,7 @@ font-weight: bold;
 	-moz-transition: all .2s ease-in;
     -o-transition: all .2s ease-in;
     -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in; 
+    transition: all .2s ease-in;
 }
 
 @media screen and (max-width: 1198px){
@@ -959,8 +954,7 @@ margin-right:auto;
 margin-left: auto;
 
 }
- 
- 
+
 .costumrow{
 	border-top: 0px solid #BABABA;
 	border-bottom: 0px solid #BABABA;
@@ -968,12 +962,12 @@ margin-left: auto;
 .colborder1{
 border-top: 1px solid #BABABA;
 border-left: 1px solid #BABABA;
-border-right:1px solid #BABABA; 
+border-right:1px solid #BABABA;
 border-bottom: 1px solid #BABABA;
 }
 .colborder2{
 border-left: 1px solid #BABABA;
-border-right:1px solid #BABABA; 
+border-right:1px solid #BABABA;
 border-bottom: 1px solid #BABABA;
 }
 .costumcol{
@@ -1574,20 +1568,19 @@ left: 0%;
 
   	}
   	.bottomlinks>li>a{
-  		
+
 
   	}
   	.bottomlinks>li{
   	float: none;
   	text-align: center;
-  		 
   	}
   	.bottommenu>img{
   		margin-bottom: 15px;
   		margin-top: 15px;
   	}
   	 .dotlogo{
- 
+
  	padding-right: 15px;
  	padding-left: 15px;
  }
@@ -1598,20 +1591,17 @@ left: 0%;
  	float: none;
  }
   	.dotlogo{
- 
  	padding-right: 30px;
  	padding-left: 30px;
- }	
+ }
    	.bottomlinks>li{
   	float: none;
   	text-align: center;
-  		 
   	}
   .bottommenu{
   	top:0px;
   }
  }
- 
 
 
 
@@ -1628,7 +1618,6 @@ font-size: 12px;
 
 width: 100%;
 height: 30px;
- 
 }
 .copyright{
 	float:left;
@@ -1655,7 +1644,6 @@ height: 30px;
 .atisda>a:hover{
 	text-decoration: none;
 }
- 
 @media screen and (max-width:600px){
 	.footer{
 		margin-top: 15px;
@@ -1672,14 +1660,14 @@ height: 30px;
 	text-align: center;
 	padding: 0;
 }
-	 
+
 	.footer>a:hover{
 		color: #F97906;
 	}
 	.footer{
- 
+
 		height: 55px;
- 
+
 }
 }
 .isotope .isotope-item {
@@ -1689,10 +1677,10 @@ height: 30px;
        -o-transition-duration: 0.8s;
           transition-duration: 0.8s;
 }
-
-
-
-
-
-
- 
+.Saloooo, .Paris .Suuuuus .Durduru {
+	font-size : 120%;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#Lanciiiaa, #toyoooo, #Rovyy {
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
