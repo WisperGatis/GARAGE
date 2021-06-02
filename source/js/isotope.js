@@ -1,7 +1,3 @@
-/*
-crée par Wesley "wisp" David
-*/
-
 (function (window) {
 
     var slice = Array.prototype.slice;
