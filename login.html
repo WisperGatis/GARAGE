@@ -79,21 +79,15 @@
 			<section>
 				<article>
 				  <form action="../php/daillen.php" method="post">
-					<div>
-					  <label for="name">Nom d'utilisateur ou mail :</label>
-					  <input type="text" id="name" name="user_name">
+					<div class="contact-form">
+						<h1>Vous connecter</h1>
+							<div class="form-group group-coustume">
+								<input type="text" class="form-control email-form" placeholder="E-mail ou nom d'utilisateur"><br>
+								<input type="text" class="form-control subject-form" placeholder="Password"><br>
+								<button type="submit" href="thx.html" class="btn btn-default btn-submit">Submit</button>
+							</div>
 					</div>
-					<div>
-					  <label for="msg">Mot de passe :</label>
-					  <input id="password" name="psd"></input>
-					</div>
-					<div class="button">
-					  <button oneclick="window.location.href='reponse.html/';" type="submit">Envoyer le message</button>
-					</div>
-				  </form>
-				</article>
-			</section>
-		</div>
+			</div>
 		<ul class="nav nav-tabs bottomlinks">
 			<li role="presentation" ><a href="#/" role="button">A PROPOS DE NOUS</a></li>
 			<li role="presentation"><a href="#/">CATEGORIES</a></li>
