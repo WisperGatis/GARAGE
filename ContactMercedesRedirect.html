@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Wisp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RedirectUser</title>
+</head>
+<body>
+<style>
+    body {
+        background-color: #000000;
+    }
+    button {
+        align-content: center;
+        color: #8a6d3b;
+    }
+    article {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    h1 {
+        color: #985f0d;
+    }
+</style>
+<article align="center">
+    <section>
+        <h1>
+            Vous êtes sur le point de quitter le site. Êtes vous sûr ?
+        </h1>
+        <button href="https://www.mercedes-benz.fr/?csref=mc-sem_cn-FRA-HQ-MBC-Brand-Individual-Marque-Pure_ci-Google_si-g_pi-kwd-1988956201_cri-456141992331_ai-7720138&kpid=go_cmp-10825190822_adg-106217118163_ad-456141992331_kwd-1988956201_dev-c_ext-&gclid=Cj0KCQjw78yFBhCZARIsAOxgSx1y-0G_09E_x-z3ifUWUyxwXDZ2n6LTl2_2r1zyoUVaW71ztpknvQkaAtqXEALw_wcB&group=all&subgroup=all.BODYTYPE.offroader&view=BODYTYPE">
+            Oui !
+        </button>
+        <button href="contact.html">
+            Rester sur ce site.
+        </button>
+    </section>
+</article>
+<script>
+    function checkCookie() {
+        let username = getCookie("username");
+        if (username != "") {
+            alert("Welcome again " + username);
+        } else {
+            username = prompt("Please enter your name:", "");
+            if (username != "" && username != null) {
+                setCookie("username", username, 365);
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="Wisp">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RedirectUser</title>
+</head>
+<body>
+<style>
+  body {
+    background-color: #000000;
+  }
+  button {
+    align-content: center;
+    color: #8a6d3b;
+  }
+  article {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  h1 {
+    color: #985f0d;
+  }
+</style>
+<article align="center">
+  <section>
+    <h1>
+      Vous êtes sur le point de quitter le site. Êtes vous sûr ?
+    </h1>
+    <button href="https://www.porsche.com/swiss/fr/">
+      Oui !
+    </button>
+    <button href="contact.html">
+      Rester sur ce site.
+    </button>
+  </section>
+</article>
+<script>
+  function checkCookie() {
+    let username = getCookie("username");
+    if (username != "") {
+      alert("Welcome again " + username);
+    } else {
+      username = prompt("Please enter your name:", "");
+      if (username != "" && username != null) {
+        setCookie("username", username, 365);
+      }
+    }
+  }
+</script>
+</body>
+</html>

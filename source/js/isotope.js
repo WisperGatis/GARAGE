@@ -1,3 +1,6 @@
+//Written by Wisp.
+
+
 (function (window) {
 
     var slice = Array.prototype.slice;

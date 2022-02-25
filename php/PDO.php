@@ -1,12 +1,10 @@
 <?php
 
-try
-{
+try {
     $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');
 }
 
-    catch (Exception $e)
-    {
+    catch (Exception $e) {
         die('Erreur : ' .$e->getMessage());
     }
 
@@ -14,11 +12,15 @@ try
 
     echo '<p align="center">Vos collections :</p>';
 
-while ($donnees = $reponse->fetch())
-{
+while ($donnees = $reponse->fetch()) {
     echo $donnees['Name'] . '<br>';
 }
 
 $reponse->closeCursor();
-    
+    if ($reponse == null) {
+        throw new \mysql_xdevapi\Exception();
+    }
+    else {
+        return;
+    }
 ?>
