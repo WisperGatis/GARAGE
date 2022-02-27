@@ -1,8 +1,8 @@
 <?php
-$to = "somebody@example.com, somebodyelse@example.com";
-$subject = "HTML email";
+    $to = "somebody@example.com, somebodyelse@example.com";
+    $subject = "HTML email";
 
-$message = "
+    $message = "
 <html>
 <head>
 <title>HTML email</title>
@@ -24,12 +24,12 @@ $message = "
 ";
 
 // Always set content-type when sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-$headers .= 'From: <webmaster@example.com>' . "\r\n";
-$headers .= 'Cc: myboss@example.com' . "\r\n";
+    $headers .= 'From: <webmaster@example.com>' . "\r\n";
+    $headers .= 'Cc: myboss@example.com' . "\r\n";
 
-mail($to,$subject,$message,$headers);
+    mail($to,$subject,$message,$headers);
 ?>
